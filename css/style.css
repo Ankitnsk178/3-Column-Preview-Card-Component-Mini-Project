@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap');
+
+:root{
+    --small-font : "Lexend Deca", sans-serif;
+    --large-font : "Big Shoulders Display", sans-serif;
+    --BrightOrange: hsl(31, 77%, 52%);
+    --DarkCyan: hsl(184, 100%, 22%);
+    --VeryDarkCyan: hsl(179, 100%, 13%);
+    --TransparentWhite: hsla(0, 0%, 100%, 0.75);
+    --VeryLightGray: hsl(0, 0%, 95%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--small-font);
+    font-size: 15px;
+}
+
+body{
+    background-color: var(--VeryLightGray);
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 900px;
+    height: auto;
+    border-radius: 0.6rem;
+    overflow: hidden;
+}
+
+#orange{
+    background-color: var(--BrightOrange);
+}
+
+#cyan{
+    background-color: var(--DarkCyan);
+}
+
+#dark_cyan{
+    background-color: var(--VeryDarkCyan);
+}
+
+.small_card{
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.car{
+    width: 4.5rem;
+}
+
+.heading{
+    font-family: var(--large-font);
+    color: var(--VeryLightGray);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.para{
+    color:var(--TransparentWhite);
+    line-height: 1.5rem;
+}
+
+.button{
+    padding: 0.6rem 1rem;
+    text-align: center;
+    width: 9rem;
+    margin-top: 3rem;
+    border-radius: 2rem;
+    background-color: var(--VeryLightGray);
+    border: 3px solid var(--VeryLightGray);
+}
+
+.small_card:nth-child(1) .button{
+    color: var(--BrightOrange);
+}
+
+.small_card:nth-child(2) .button{
+    color: var(--DarkCyan);
+}
+
+.small_card:nth-child(3) .button{
+    color: var(--VeryDarkCyan);
+}
+
+.button:hover{
+    background-color: transparent;
+    border: 3px solid var(--VeryLightGray); 
+    cursor:pointer;
+}
+
+.small_card .button:hover{
+    color: var(--VeryLightGray);
+}
+
+@media (max-width:910px){
+    .card{
+        width: 70%;
+        grid-template-columns: repeat(1,1fr);
+        margin: 5rem auto;
+    }
+}
+
+@media (max-width:475px){
+    .card{
+        width: 90%;
+    }
+}
